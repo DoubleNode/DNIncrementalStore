@@ -13,6 +13,8 @@
 
 @interface DNISDataModel : DNDataModel
 
+@property (strong, nonatomic, readonly)   NSPersistentStore*    persistentStore;
+
 @property (assign, atomic)      BOOL        useIncrementalStore;
 
 + (id)dataModel;

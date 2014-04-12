@@ -27,6 +27,8 @@
 
 @implementation DNISDataModel
 
+@synthesize persistentStore = _persistentStore;
+
 + (id)dataModel
 {
     DLog(LL_Debug, LD_CoreData, @"Should NOT be here!");
@@ -66,11 +68,18 @@
 
 - (NSPersistentStore*)persistentStore
 {
-    NSPersistentStore*  retval = [super persistentStore];
+    if (_persistentStore)
+    {
+        return _persistentStore;
+    }
 
-    NSError*    error       = nil;
+    NSError*    error   = nil;
 
-    if ([self useIncrementalStore] == YES)
+    if ([self useIncrementalStore] == NO)
+    {
+        return [super persistentStore];
+    }
+    else
     {
         NSString*   incrmentalStoreClass    = [NSString stringWithFormat:@"%@IncrementalStore", [[self class] dataModelName]];
 
@@ -81,10 +90,10 @@
                                                                                                                error:&error];
         if (ist != nil)
         {
-            super.persistentStore = [self persistentStoreWithPersistentStoreCoordinator:ist.backingPersistentStoreCoordinator];
-            if (super.persistentStore == nil)
+            _persistentStore = [self persistentStoreWithPersistentStoreCoordinator:ist.backingPersistentStoreCoordinator];
+            if (_persistentStore == nil)
             {
-                DLog(LL_Critical, LD_CoreData, @"Unresolved error %@, %@", error, [error userInfo]);
+                DLog(LL_Critical, LD_CoreData, @"Error creating persistent store");
                 abort();
             }
         }
