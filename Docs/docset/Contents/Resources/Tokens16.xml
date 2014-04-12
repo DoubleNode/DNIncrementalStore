@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/DNStateViewController.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/DNStateViewController</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DNStateViewController.h</DeclaredIn>
+            
+			
+			<NodeRef refid="16"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DNStateViewController/changeToViewState:animated:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DNStateViewController.h</DeclaredIn>
+			
+			<Declaration>- (void)changeToViewState:(NSString *)newViewState animated:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/changeToViewState:animated:</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DNStateViewController/changeFromCurrentState:toNewState:animated:completion:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DNStateViewController.h</DeclaredIn>
+			
+			<Declaration>- (void)changeFromCurrentState:(NSString *)currentState toNewState:(NSString *)newState animated:(BOOL)animated completion:(void ( ^ ) ( BOOL finished ))completion</Declaration>
+			
+			
+			<Anchor>//api/name/changeFromCurrentState:toNewState:animated:completion:</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/DNStateViewController/performViewStateSelector:options:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>DNStateViewController.h</DeclaredIn>
+			
+			<Declaration>- (void)performViewStateSelector:(SEL)aSelector options:(DNStateOptions *)options</Declaration>
+			
+			
+			<Anchor>//api/name/performViewStateSelector:options:</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>
