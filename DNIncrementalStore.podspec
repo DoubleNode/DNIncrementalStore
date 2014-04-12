@@ -6,7 +6,7 @@
 #
 Pod::Spec.new do |s|
   s.name         = "DNIncrementalStore"
-  s.version      = "0.6.0"
+  s.version      = "0.6.1"
   s.summary      = "A AFIncrementalStore derivative for the DoubleNode library"
   # s.description  = <<-DESC
   #                   An optional longer description of DoubleNode
