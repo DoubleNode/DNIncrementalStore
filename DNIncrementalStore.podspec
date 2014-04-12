@@ -101,6 +101,6 @@ Pod::Spec.new do |s|
 
   # Finally, specify any Pods that this Pod depends on.
   #
-  s.dependency 'DoubleNode'
-  s.dependency 'AFIncrementalStore', :git => "git@github.com:tableproject/AFIncrementalStore.git"
+  s.dependency 'DoubleNode', :git => "git@github.com:doublenode/DoubleNode.git"
+  s.dependency 'AFIncrementalStore', :git => "git@github.com:doublenode/AFIncrementalStore.git"
 end
