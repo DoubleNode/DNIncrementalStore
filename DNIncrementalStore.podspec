@@ -103,4 +103,5 @@ Pod::Spec.new do |s|
   #
   s.dependency 'DoubleNode'
   s.dependency 'AFIncrementalStore'
+  s.dependency 'NSLogger'
 end
